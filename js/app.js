@@ -111,3 +111,24 @@ function mostrarGeneracion() {
     alert("Primero debes crear una persona.");
   }
 }
+
+function esMayorDeEdad() {
+  if (persona) {
+    const esMayor = persona.esMayorDeEdad();
+    if (esMayor) {
+      alert("La persona es mayor de edad.");
+    } else {
+      alert("La persona no es mayor de edad.");
+    }
+  } else {
+    alert("Por favor, crea una persona primero.");
+  }
+}
+
+function mostrarDatos() {
+  if (persona) {
+    persona.mostrarDatos();
+  } else {
+    alert("Por favor, crea una persona primero.");
+  }
+}
