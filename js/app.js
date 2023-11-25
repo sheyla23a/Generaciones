@@ -87,3 +87,27 @@ function crearPersona() {
     alert("Persona creada correctamente.");
   }
 }
+function crearPersona() {
+  if (validarFormulario()) {
+    const nombre = document.getElementById("nombre").value;
+    const edad = parseInt(document.getElementById("edad").value);
+    const sexo = document.getElementById("sexo").value;
+    const peso = parseFloat(document.getElementById("peso").value);
+    const altura = parseFloat(document.getElementById("altura").value);
+    const anioNacimiento = parseInt(
+      document.getElementById("anioNacimiento").value
+    );
+
+    persona = new Persona(nombre, edad, sexo, peso, altura, anioNacimiento);
+
+    alert("Persona creada correctamente.");
+  }
+}
+
+function mostrarGeneracion() {
+  if (persona) {
+    persona.mostrarGeneracion();
+  } else {
+    alert("Primero debes crear una persona.");
+  }
+}
